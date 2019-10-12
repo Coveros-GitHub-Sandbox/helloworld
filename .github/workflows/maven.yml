@@ -18,4 +18,4 @@ jobs:
     - name: ESLint checks
       uses: mridang/action-intellij@master
       env:
-        GITHUB_TOKEN: "poop"
+        GITHUB_TOKEN: "ddggd"
