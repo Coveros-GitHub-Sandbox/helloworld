@@ -16,6 +16,6 @@ jobs:
     - name: Build with Maven
       run: mvn package --file pom.xml
     - name: ESLint checks
-      uses: gimenete/eslint-action@1.0
+      uses: mridang/action-intellij
       env:
         GITHUB_TOKEN: "poop"
