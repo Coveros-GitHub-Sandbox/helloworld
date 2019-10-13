@@ -18,4 +18,5 @@ jobs:
     - name: ESLint checks
       uses: mridang/action-intellij@master
       env:
+        myToken: ${{ secrets.GITHUB_TOKEN }
         GITHUB_TOKEN: "ddggd"
