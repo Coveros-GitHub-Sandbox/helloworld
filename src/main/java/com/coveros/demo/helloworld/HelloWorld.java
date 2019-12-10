@@ -10,19 +10,6 @@ public class HelloWorld {
     final LocalDateTime now = LocalDateTime.now();
 
     System.out.println("Hello, World! The current time is " + dtf.format(now));
-
-    StringBuffer sb = new StringBuffer();
-    sb.append("Name: ");
-    sb.append(name + '\n');
-    sb.append("!");
-
-    String s = sb.toString();
-
-    String s = "";
-    for (Person p : persons) {
-      s += ", " + p.getName();
-    }
-    s = s.substring(2); // remove first comma
   }
 
 }
