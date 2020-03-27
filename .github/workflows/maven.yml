@@ -19,5 +19,5 @@ jobs:
       uses: mridang/action-intellij@master
       with:
         credentials: ${{ secrets.GITHUB_TOKEN }}
-      env:
+      with:
         myToken: ${{ secrets.GITHUB_TOKEN }}
