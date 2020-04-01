@@ -1,4 +1,5 @@
 library('serviceapp-library')
 node {
- serviceAppBuild{}   
-}
+    stage 'Build'
+        sh '/var/lib/jenkins/apache-maven-3.5.3/bin/mvn clean '
+     }
