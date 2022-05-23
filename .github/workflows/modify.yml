@@ -3,7 +3,11 @@
 
 name: Multiple changrs mvn
 
-on: push
+on: 
+  push:
+    branches: [ master,local ]
+  pull_request:
+    branches: [ master, local ]
 jobs:  
     build:
       strategy:
