@@ -3,11 +3,7 @@
 
 name: Multiple changrs mvn
 
-on:
-  push:
-    paths:
-      - 'src/main/java/com/coveros/demo/helloworld/*.java'
-
+on: push
 jobs:  
     build:
       strategy:
