@@ -3,11 +3,10 @@
 
 name: Multiple changrs mvn
 
-on: 
+on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths:
+      - 'src/main/java/com/coveros/demo/helloworld/*.java'
 
 jobs:
   build:
