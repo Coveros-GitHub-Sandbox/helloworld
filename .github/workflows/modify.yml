@@ -5,7 +5,7 @@ name: Multiple changrs mvn
 
 on: 
   push:
-    branches: [ master,local ]
+    branches: [ master, local ]
   pull_request:
     branches: [ master, local ]
 jobs:  
