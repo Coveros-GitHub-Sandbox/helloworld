@@ -7,6 +7,7 @@ stages:
 - stage: A
   jobs:
   - job: A1
+    dependsOn: A2
     steps:
     - task: Maven@3
       inputs:
@@ -19,6 +20,12 @@ stages:
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
   - job: A2
+    steps:
+    - task: ManualValidation@0
+      timeoutInMinutes: 2
+      inputs:
+        notifyUsers: '1111'
+        instructions: '2222'
 
 - stage: B
   jobs:
