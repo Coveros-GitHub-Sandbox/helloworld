@@ -28,7 +28,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy Javadoc
+    - name: Deploy
       # You may pin to the exact commit or the version.
       # uses: MathieuSoysal/Javadoc-publisher.yml@fd508f6228509c8fb511feb5cc0c0f9ac146070f
       uses: MathieuSoysal/Javadoc-publisher.yml@v2.0.4
