@@ -24,6 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: Deploy Javadoc
       # You may pin to the exact commit or the version.
       # uses: MathieuSoysal/Javadoc-publisher.yml@fd508f6228509c8fb511feb5cc0c0f9ac146070f
