@@ -31,7 +31,7 @@ stages:
 
 - stage: DeployEurope
   dependsOn:         # this stage runs after DeployUS1 and DeployUS2
-  - DeployUS1
+  - DeployUS3
   - DeployUS2
   jobs:
     - job: C1
