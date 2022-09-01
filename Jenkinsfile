@@ -7,7 +7,8 @@ pipeline {
      // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
 
      SERVICE_NAME = "helloworld"
-     REPOSITORY_TAG="minikube/aubriellepie-comfortT-${SERVICE_NAME}:${BUILD_ID}"
+     //REPOSITORY_TAG="minikube/aubriellepie-comfortT-${SERVICE_NAME}:${BUILD_ID}"
+     REPOSITORY_TAG="https://github.com/aubriellepie-comfortT/fleetman-webapp.git"
    }
 
    stages {

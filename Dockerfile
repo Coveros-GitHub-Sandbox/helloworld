@@ -28,3 +28,9 @@ RUN  wget https://storage.googleapis.com/kubernetes-release/release/$(curl -s ht
 # See https://github.com/kubernetes/minikube/issues/956.
 # THIS IS FOR MINIKUBE TESTING ONLY - it is not production standard (we're running as root!)
 RUN chown -R root "$JENKINS_HOME" /usr/share/jenkins/ref
+
+FROM openjdk:8-jdk-alpine
+WORKDIR /usr/local/bin/
+COPY target/demo-frontend-1.0-SNAPSHOT.jar app.jar
+ENV JAVA_OPTS=""
+ENTRYPOINT exec java -jar /app.jar
