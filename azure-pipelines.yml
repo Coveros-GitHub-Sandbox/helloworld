@@ -40,6 +40,9 @@ stages:
   jobs:
   - job: B1
   - job: B2
+  - job: B3
+    dependsOn: [B1,B2]
+      
 
 trigger:
 - master
