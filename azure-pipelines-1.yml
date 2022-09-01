@@ -11,15 +11,23 @@ pool:
 
 stages:
 - stage: Test
+  jobs:
+    - job: A1
+
 
 - stage: DeployUS1
   dependsOn: Test    # this stage runs after Test
+  jobs:
+    - job: B1
 
 - stage: DeployUS2
   dependsOn: Test    # this stage runs in parallel with DeployUS1, after Test
+  jobs:
+    - job: B2
 
 - stage: DeployEurope
   dependsOn:         # this stage runs after DeployUS1 and DeployUS2
   - DeployUS1
   - DeployUS2
-
+  jobs:
+    - job: C1
