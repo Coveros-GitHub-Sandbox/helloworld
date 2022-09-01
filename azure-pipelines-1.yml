@@ -1,0 +1,25 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Test
+
+- stage: DeployUS1
+  dependsOn: Test    # this stage runs after Test
+
+- stage: DeployUS2
+  dependsOn: Test    # this stage runs in parallel with DeployUS1, after Test
+
+- stage: DeployEurope
+  dependsOn:         # this stage runs after DeployUS1 and DeployUS2
+  - DeployUS1
+  - DeployUS2
+
