@@ -13,6 +13,27 @@ stages:
 - stage: Test
   jobs:
     - job: A1
+      steps:
+        - task: Maven@3
+          inputs:
+            mavenPomFile: 'pom.xml'
+            publishJUnitResults: true
+            testResultsFiles: '**/surefire-reports/TEST-*.xml'
+            javaHomeOption: 'JDKVersion'
+            mavenVersionOption: 'Default'
+            mavenAuthenticateFeed: false
+            effectivePomSkip: false
+            sonarQubeRunAnalysis: false
+    - job: A2
+      steps:    
+        - task: CmdLine@2
+          inputs:
+            script: |
+              echo Write your commands here
+              
+              echo Hello world
+              
+              sleep 10
 
 
 - stage: DeployUS1
