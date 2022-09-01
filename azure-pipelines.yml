@@ -30,7 +30,25 @@ stages:
 - stage: B
   jobs:
   - job: B1
+    steps:
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
+          
+          echo Hello world
+          
+          sleep 10
   - job: B2
+    steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            echo Write your commands here
+            
+            echo Hello world
+            
+            sleep 10
   - job: B3
     dependsOn: [B1,B2]
       
