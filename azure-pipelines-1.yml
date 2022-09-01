@@ -19,6 +19,10 @@ stages:
   dependsOn: Test    # this stage runs after Test
   jobs:
     - job: B1
+- stage: DeployUS3
+  dependsOn: B1    # this stage runs after Test
+  jobs:
+    - job: B3
 
 - stage: DeployUS2
   dependsOn: Test    # this stage runs in parallel with DeployUS1, after Test
