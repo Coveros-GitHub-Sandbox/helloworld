@@ -20,7 +20,7 @@ stages:
   jobs:
     - job: B1
 - stage: DeployUS3
-  dependsOn: B1    # this stage runs after Test
+  dependsOn: DeployUS1    # this stage runs after Test
   jobs:
     - job: B3
 
