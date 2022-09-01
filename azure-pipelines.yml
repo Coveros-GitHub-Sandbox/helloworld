@@ -4,6 +4,42 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 stages:
+- stage: B
+  jobs:
+  - job: A1
+    steps:
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
+          
+          echo Hello world
+          
+          sleep 10
+  - job: A2
+    dependsOn: A1
+    steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            echo Write your commands here
+            
+            echo Hello world
+            
+            sleep 10
+  - job: B1
+    steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            echo Write your commands here
+            
+            echo Hello world
+            
+            sleep 10
+  - job: C1
+    dependsOn: [B1,A2]
+    
 - stage: A
   jobs:
   - job: A1
@@ -27,30 +63,7 @@ stages:
         instructions: '2222'
     
 
-- stage: B
-  jobs:
-  - job: B1
-    steps:
-    - task: CmdLine@2
-      inputs:
-        script: |
-          echo Write your commands here
-          
-          echo Hello world
-          
-          sleep 10
-  - job: B2
-    steps:
-      - task: CmdLine@2
-        inputs:
-          script: |
-            echo Write your commands here
-            
-            echo Hello world
-            
-            sleep 10
-  - job: B3
-    dependsOn: [B1,B2]
+
       
 
 trigger:
