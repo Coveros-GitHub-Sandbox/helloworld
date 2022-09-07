@@ -2,13 +2,9 @@ name: unite_test
 on: 
  push:
   branches:
-    - 'testing'
+     'testing'
 jobs:
-  unite-testing:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: setup JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: 1.11
+ test:
+  runs-on: ubuntu-18.04
+  steps:
+    - uses: actions/chekout@v2
