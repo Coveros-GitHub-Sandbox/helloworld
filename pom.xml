@@ -80,9 +80,9 @@
         <sonar.projectkey>abhsihekb7245</sonar.projectkey>
         <sonar.organization>AbhishekB7245</sonar.organization>
         <sonar.hosturl>https://sonarcloud.io</sonar.hosturl>
+      </properties> 
         <activation>
           <activeByDefault>false</activeByDefault>
-      </properties>
         </activation>
         <build>
           <plugins>
@@ -101,7 +101,6 @@
             </plugin>
           </plugins>
         </build>
-      </properties>
     </profile>
   </profiles>  
 </project>
