@@ -13,4 +13,6 @@ jobs:
       with:
         java-version: 1.11
     - name: Maven Package
-      run: mvn -B clean package -Pintegration-test
+      run: mvn -B clean package -DskipTests
+    - name: Maven Verify
+      run: mvn -B clean verify -Pintegration-test
