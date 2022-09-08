@@ -16,4 +16,7 @@ jobs:
       run: mvn -B clean package -DskipTests
     - name: Maven Verify
       run: mvn -B clean verify -Pintegration-test
-  
+    - name: sonarcloud scan
+      run: mvn -B clean verify -Psonar -Dsonar.login${{secrets.SONAR_TOKEN}}
+      env:
+       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
