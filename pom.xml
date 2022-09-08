@@ -51,7 +51,7 @@
         <version>3.0.0-M7</version>
         <configuration>
           <includes>
-            <include>helloworl.java</include>
+            <include>HelloWorld.java</include>
           </includes>
         </configuration>
       </plugin>
