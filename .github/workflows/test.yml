@@ -12,6 +12,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+        distribution: GraaIVM
     - name: Maven Package
       run: mvn -B clean package -DskipTests
     - name: Maven Verify
