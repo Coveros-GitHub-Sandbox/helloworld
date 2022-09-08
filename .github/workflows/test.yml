@@ -11,7 +11,8 @@ jobs:
     - name: setup JDK
       uses: actions/setup-java@v3
       with:
-        java-version: 12
+        distribution: 'temurin'
+        java-version: '11'
     - name: Maven Package
       run: mvn -B clean package -DskipTests
     - name: Maven Verify
@@ -23,7 +24,8 @@ jobs:
     - name: setup java
       uses: actions/setup-java@v3
       with:
-        java-version: 12
+        distribution: 'temurin'
+        java-version: '11'
     - name: cache sonarcloud packages
       uses: actions/cache@v1
       with:
