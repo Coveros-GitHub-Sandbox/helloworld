@@ -1,7 +1,7 @@
 package io.codejournal.maven.failsafedemo;
-import org.junit.jupiter.api.Tests;
+import org.junit.jupiter.api.Test;
 
-public class circleTestIT {
+public class circletestIT {
   
   @Test
   public void integrationtest1(){
