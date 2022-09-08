@@ -45,6 +45,16 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <includes>
+            <include>helloworl.java</include>
+          </includes>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
