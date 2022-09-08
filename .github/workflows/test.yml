@@ -17,6 +17,6 @@ jobs:
     - name: Maven Verify
       run: mvn -B clean verify -Pintegration-test
     - name: sonarcloud scan
-      run: mvn -B clean verify -Psonar -Dsonar.login${{secrets.SONAR_TOKEN}}
+      run: mvn -B clean verify -Psonar -Dsonar.login=f55865f2a7054f544a80fbe253a02ee1897f547f
       env:
        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
