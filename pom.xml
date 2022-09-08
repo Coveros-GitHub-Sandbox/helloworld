@@ -79,7 +79,7 @@
       <properties>
         <sonar.projectkey>abhsihekb7245</sonar.projectkey>
         <sonar.organization>AbhishekB7245</sonar.organization>
-        <sonar.hosturl>https://sonarcloud.io</sonar.hosturl>
+        <sonar.hosturl>https://sonarcloud.io/project/overview?id=AbhishekB7245_Github-Actions</sonar.hosturl>
       </properties> 
         <activation>
           <activeByDefault>false</activeByDefault>
