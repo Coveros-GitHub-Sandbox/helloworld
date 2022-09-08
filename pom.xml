@@ -77,7 +77,7 @@
     <profile>
       <id>sonar</id>
       <properties>
-        <sonar.projectkey>abhsihekb7245<sonar.projectkey>
+        <sonar.projectkey>abhsihekb7245</sonar.projectkey>
         <sonar.organization>AbhishekB7245</sonar.organization>
         <sonar.hosturl>https://sonarcloud.io</sonar.hosturl>
         <activation>
