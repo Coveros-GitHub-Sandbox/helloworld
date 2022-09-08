@@ -81,7 +81,7 @@
         <sonar.organization>AbhishekB7245</sonar.organization>
         <sonar.hosturl>https://sonarcloud.io</sonar.hosturl>
         <activation>
-          <activeByDefault>false</activeByDefault>
+          <activeByDefault>true</activeByDefault>
         </activation>
         <build>
           <plugins>
