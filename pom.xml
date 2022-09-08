@@ -19,7 +19,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <sonar.organization>abhishekb7245</sonar.organization>
+    <sonar.organization>AbhishekB7245_Github-Actions</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
   <profiles>
