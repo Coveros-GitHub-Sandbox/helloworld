@@ -19,6 +19,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.organization>abhishekb7245</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
   <profiles>
     <profile>
@@ -73,34 +75,6 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
-    <profile>
-      <id>sonar</id>
-      <properties>
-        <sonar.projectkey>abhsihekb7245</sonar.projectkey>
-        <sonar.organization>AbhishekB7245</sonar.organization>
-        <sonar.hosturl>https://sonarcloud.io/project/overview?id=AbhishekB7245_Github-Actions</sonar.hosturl>
-      </properties> 
-        <activation>
-          <activeByDefault>false</activeByDefault>
-        </activation>
-        <build>
-          <plugins>
-            <plugin>
-              <groupId>org.sonarsource.scanner.maven</groupId>
-              <artifactId>sonar-maven-plugin</artifactId>
-              <version>3.2</version>
-              <executions>
-                <execution>
-                  <phase>verify</phase>
-                  <goals>
-                    <goal>sonar</goal>
-                  </goals>
-                </execution>
-              </executions>
-            </plugin>
-          </plugins>
-        </build>
     </profile>
   </profiles>  
 </project>
