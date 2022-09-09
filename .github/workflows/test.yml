@@ -19,8 +19,6 @@ jobs:
       run: mvn -B clean verify -Pintegration-test
  sonarcloud:
   runs-on: linux
-  container: 
-   image: maven:3.8.4-jdk-11
    env:
      url: ${{secrets.SONAR_URL}}
      login: ${{secrets.SONAR_TOKEN}}
@@ -28,6 +26,13 @@ jobs:
      
   steps:
     - uses: actions/checkout@v3
+    
+    - name: setup-jdk
+    - uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        disrribution: 'timurin'
+        
     
     - name: build and test
       run: |
