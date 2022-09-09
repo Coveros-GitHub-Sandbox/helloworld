@@ -81,34 +81,5 @@
         </plugins>
       </build>
     </profile>
-    <profile>
-      <id>sonar</id>
-      <properties>
-			   <sonar.sources>.</sonar.sources>
-			   <sonar.projectKey>AbhishekB7245_Github-Actions</sonar.projectKey>
-			   <sonar.organization>AbhishekB7245</sonar.organization>
-			<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		  </properties>
-      <activation>
-			    <activeByDefault>false</activeByDefault>
-		  </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.sonarsource.scanner.maven</groupId>
-					  <artifactId>sonar-maven-plugin</artifactId>
-					  <version>3.7.0.1746</version>
-            <executions>
-              <execution>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sonar</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </pligins>
-      </buid>
-    </profile>
   </profiles>  
 </project>
