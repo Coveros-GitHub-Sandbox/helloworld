@@ -19,7 +19,7 @@ jobs:
       run: mvn -B clean verify -Pintegration-test
  sonarcloud:
   runs-on: linux
-   env:
+  env:
      url: ${{secrets.SONAR_URL}}
      login: ${{secrets.SONAR_TOKEN}}
      projectkey: ${{secrets.SONAR_PROJECTKEY}}
