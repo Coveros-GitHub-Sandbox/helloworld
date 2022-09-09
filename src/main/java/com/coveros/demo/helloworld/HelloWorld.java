@@ -11,7 +11,7 @@ public class HelloWorld {
    
 
     System.out.println("Hello, World! The current time is " + dtf.format(now));
-    System.out.println(hello)
+    System.out.println(hello);
   }
 
 }
