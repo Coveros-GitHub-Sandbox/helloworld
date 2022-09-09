@@ -10,9 +10,14 @@ public class HelloWorld {
     final LocalDateTime now = LocalDateTime.now();
     int i = 42;
     double d = Double.longBitsToDouble(i);
+    public int shift(int a) {
+      int x = a >> 32;
+      return a << 48;
+}
    
 
     System.out.println("Hello, World! The current time is " + dtf.format(now));
   }
+  
 
 }
