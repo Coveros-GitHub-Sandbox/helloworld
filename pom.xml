@@ -103,7 +103,7 @@
               <execution>
                 <phase>verify</phase>
                 <goals>
-                  <goals>sonar</goal>
+                  <goal>sonar</goal>
                 </goals>
               </execution>
             </executions>
