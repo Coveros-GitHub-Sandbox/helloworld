@@ -1,17 +1,21 @@
-package com.coveros.demo.helloworld;
+public class MainClass {
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+  @Nonnull
+  private String primary;
+  private String secondary;
 
-public class HelloWorld {
-
-  public static void main(final String[] args) {
-    final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("h:mm:ss a 'on' MMMM d, yyyy'.'");
-    final LocalDateTime now = LocalDateTime.now();
-   
-
-    System.out.println("Hello, World! The current time is " + dtf.format(now));
-    System.out.println(hello);
+  public MainClass(String color) {
+    if (color != null) {
+      secondary = null;
+    }
+    primary = color;  // Noncompliant; "primary" is Nonnull but could be set to null here
   }
 
-}
+  public MainClass() { // Noncompliant; "primary" is Nonnull but is not initialized
+  }
+
+  @Nonnull
+  public String indirectMix() {
+    String mix = null;
+    return mix;  // Noncompliant; return value is Nonnull, but null is returned.
+  }
