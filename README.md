@@ -9,7 +9,4 @@ To build
 
 To run
 ------//
-    java -cp target/helloworld-1.0.jar com.coveros.demo.helloworld.HelloWorld
-//
-
-/hi hello how are you  /
+    java -cp target/helloworld-1.0.jar com.coveros.demo.helloworld.Hel
