@@ -8,7 +8,7 @@ public class HelloWorld {
   public static void main(final String[] args) {
     final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("h:mm:ss a 'on' MMMM d, yyyy'.'");
     final LocalDateTime now = LocalDateTime.now();
-    int i = 42;
+    int i = 22;
     double d = Double.longBitsToDouble(i);
     int target = -5;
     int num = 3;
