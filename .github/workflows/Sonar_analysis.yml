@@ -30,7 +30,7 @@ jobs:
         with:
           username: ${{ secrets.JF_LOGIN_ID }}
           password: ${{secrets.JF_PASSWORD }}
-          registry: https://docker.io
+          registry: https://hub.docker.com/repository/docker/abhishekb7245/my_repository
           push: true
           tags: latest
         
