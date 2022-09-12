@@ -19,3 +19,10 @@ jobs:
       - name: Build_Test
         run: |
              mvn -B clean verify
+      - name: Sonar Scan
+        run: |
+             mvn sonar:sonar \
+               -Dsonar.projectKey=${{ secrets.SONAR_PROJECTKEY }} \
+               -Dsonar.host.url=${{ secrets.SONAR_URL }} \
+               -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+
