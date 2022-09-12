@@ -19,10 +19,10 @@ jobs:
       - name: Build_Test
         run: |
              mvn -B clean verify
-      - name: Sonar Scan
-        run: |
-             mvn sonar:sonar \
-               -Dsonar.projectKey=${{ secrets.SONAR_PROJECTKEY }} \
-               -Dsonar.host.url=${{ secrets.SONAR_URL }} \
-               -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=AbhishekB7245_Github-Actions
+
 
