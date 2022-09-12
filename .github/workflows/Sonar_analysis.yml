@@ -26,7 +26,7 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=${{ secrets.SONAR_PROJECTKEY }}
       
       - name: build and push to artifactory
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v3
         with:
           username: ${{ secrets.JF_LOGIN_ID }}
           password: ${{secrets.JF_PASSWORD }}
