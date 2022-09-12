@@ -20,13 +20,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-  <dependencies>
-     <dependency>
-          <groupId>org.sonatype.plexus</groupId>
-          <artifactId>plexus-cipher</artifactId>
-          <version>1.4</version>
-     </dependency>
-  </dependencies>
   <profiles>
     <profile>
       <id>integration-test</id>
