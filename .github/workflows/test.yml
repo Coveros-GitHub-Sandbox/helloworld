@@ -19,7 +19,7 @@ jobs:
       run: mvn -B clean verify -Pintegration-test
  
  Sonar-cloud:
-  runs-on: ubunu-18.04
+  runs-on: ubunu-latest
   env:
     url: ${{secrets.SONAR_URL}}
     login: ${{secrets.SONAR_TOKEN}}
