@@ -5,7 +5,7 @@ on:
       [master]
 jobs:
   Build_and_Test:
-    runs-on: [linux]
+    runs-on: linux
     container:
       image: maven:3.8.4-jdk-8
     env:
