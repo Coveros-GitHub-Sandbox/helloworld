@@ -2,10 +2,10 @@ name: Build_Test_Analysis
 on:
   push:
     branches:
-      [master]
+      'master'
 jobs:
   Build_and_Test:
-    runs-on: linux
+    runs-on: ubuntu-latest
     container:
       image: maven:3.8.4-jdk-8
     env:
