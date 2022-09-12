@@ -7,7 +7,7 @@ jobs:
   Build_and_Test:
     runs-on: ubuntu-latest
     container:
-      image: maven:3.8.4-jdk-8
+      image: maven:3.8.4-jdk-11
     env:
       projectkey: ${{secrets.SONAR_PROJECTKEY}}
       url: ${{secrets.SONAR_URL}}
