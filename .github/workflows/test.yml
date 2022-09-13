@@ -50,7 +50,7 @@ jobs:
       run: |
            mvn sonar:sonar -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }} \n
                            -Dsonar.host.url=${{ secrets.SONAR_URL }} \n
-                           -Dsonar.login=${{ secrets.SONAR_TOKEN }} \n
+                           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
   
   
    
