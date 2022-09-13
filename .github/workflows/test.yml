@@ -7,7 +7,15 @@ jobs:
  test:
   runs-on: ubuntu-18.04
   steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2 
+    - name: Set up Maven
+      uses: stCarolas/setup-maven@v4.4
+      with:
+        maven-version: 3.8.2    
+    - name: Set up Maven
+      uses: stCarolas/setup-maven@v4.4
+      with:
+        maven-version: 3.8.2
     - name: setup JDK
       uses: actions/setup-java@v3
       with:
