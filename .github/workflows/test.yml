@@ -25,10 +25,10 @@ jobs:
     login: ${{ secrets.SONAR_TOKEN }}
     projectkey: ${{ secrets.SONAR_PROJECTKEY }}
   steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     
     - name: setup-jdk
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         java-version: '11'
         disribution: 'timurin'
@@ -39,7 +39,7 @@ jobs:
       run: |
            mvn sonar:sonar/
            -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }}\
-           -Dsonar.host.url=${{ secrets.SONAR.URL }}\
+           -Dsonar.host.url=${{ secrets.SONAR_URL }}\
            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
   
   
