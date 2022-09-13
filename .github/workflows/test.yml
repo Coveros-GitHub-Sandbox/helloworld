@@ -19,11 +19,11 @@ jobs:
       run: mvn -B clean verify -Pintegration-test
  
  Sonar-cloud:
-  runs-on: ubunu-latest
+  runs-on: ubunu-18.04
   env:
-    url: ${{secrets.SONAR_URL}}
-    login: ${{secrets.SONAR_TOKEN}}
-    projectkey: ${{secrets.SONAR_PROJECTKEY}}
+    url: ${{ secrets.SONAR_URL }}
+    login: ${{ secrets.SONAR_TOKEN }}
+    projectkey: ${{ secrets.SONAR_PROJECTKEY }}
   steps:
     - uses: actions/checkout@v3
     
@@ -31,16 +31,16 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        disrribution: 'timurin'
+        disribution: 'timurin'
     - name: build and test
       run: |
            mvn clean verify
     - name: sonar scan
       run: |
            mvn sonar:sonar/
-           -Dsonar.projectkey=${{secrets.SONAR_PROJECTKEY}}\
-           -Dsonar.host.url=${{secrets.SONAR.URL}}\
-           -Dsonar.login=${{secrets.SONAR_TOKEN}}
+           -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }}\
+           -Dsonar.host.url=${{ secrets.SONAR.URL }}\
+           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
   
   
    
