@@ -30,8 +30,8 @@ jobs:
     - name: setup-jdk
       uses: actions/setup-java@v3
       with:
+        distribution: 'temurin'
         java-version: '11'
-        disribution: 'timurin'
     - name: build and test
       run: |
            mvn clean verify
