@@ -20,10 +20,6 @@ jobs:
  
  Sonar-cloud:
   runs-on: ubuntu-18.04
-  env:
-    url: ${{ secrets.SONAR_URL }}
-    login: ${{ secrets.SONAR_TOKEN }}
-    projectkey: ${{ secrets.SONAR_PROJECTKEY }}
   steps:
     - uses: actions/checkout@v2
       with:
@@ -44,10 +40,7 @@ jobs:
            mvn clean verify
     - name: sonar scan
       run: |
-           mvn sonar:sonar \
-           -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }} \
-           -Dsonar.host.url=${{ secrets.SONAR_URL }} \
-           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+           mvn sonar:sonar -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }} -Dsonar.host.url=${{ secrets.SONAR_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }}
   
   
    
