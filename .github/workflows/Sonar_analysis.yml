@@ -18,7 +18,7 @@ jobs:
       
       - name: Build_Test
         run: |
-             mvn -B clean verify -Pcoverage
+             mvn -B clean verify
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
