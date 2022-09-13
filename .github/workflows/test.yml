@@ -26,7 +26,8 @@ jobs:
     projectkey: ${{ secrets.SONAR_PROJECTKEY }}
   steps:
     - uses: actions/checkout@v2
-    
+      with:
+        feth-depth: 0
     - name: setup-jdk
       uses: actions/setup-java@v3
       with:
