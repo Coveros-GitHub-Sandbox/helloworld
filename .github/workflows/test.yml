@@ -37,9 +37,9 @@ jobs:
            mvn clean verify
     - name: sonar scan
       run: |
-           mvn sonar:sonar/
-           -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }}\
-           -Dsonar.host.url=${{ secrets.SONAR_URL }}\
+           mvn sonar:sonar \
+           -Dsonar.projectkey=${{ secrets.SONAR_PROJECTKEY }} \
+           -Dsonar.host.url=${{ secrets.SONAR_URL }} \
            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
   
   
