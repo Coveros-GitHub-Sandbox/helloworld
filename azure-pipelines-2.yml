@@ -13,9 +13,9 @@ stages:
   - stage: A
     jobs:
         - job: A1
-  - stage: A
+  - stage: B
     jobs:
-      - job: B1
+      - job: A1
   - stage: C
     dependsOn: A    # this stage runs after Test
     jobs:
