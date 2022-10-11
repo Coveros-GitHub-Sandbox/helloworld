@@ -9,7 +9,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/demopipelinetask/my-app") {
                 sh 'mvn clean package'
                 }
             }
