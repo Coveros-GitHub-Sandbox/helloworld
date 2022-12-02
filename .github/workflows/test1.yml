@@ -1,0 +1,9 @@
+name: testing
+on:
+ push:
+  branches:
+   - main
+jobs:
+  test:
+   name: testing   
+   uses: philips-internal/workflows/.github/workflows/template_superlinter.yml@superlinter-v0.7.0
