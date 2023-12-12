@@ -4,4 +4,8 @@
 
 # Maven
 /target
+
+qa-test.json
+
 dev-task.json
+
