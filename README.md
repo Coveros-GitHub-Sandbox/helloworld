@@ -1,4 +1,4 @@
-HelloWorld Program for java
+HelloWorld Program for java from me
 ==========
 
 A simple Java application that can be compiled into a .jar file using Maven.
